@@ -5,6 +5,9 @@
         <!-- Affiche les détails de l'énigme -->
         <EnigmeDetails :enigme="enigme" />
         <br />
+        <CustomButton label="Autre énigme" @click="changeEnigme" type="warning" size="small"/>
+        <CustomButton label="Afficher la réponse" @click="displayAnswer" type="danger" size="small"/>
+        <br />
         <!-- Affiche un message d'erreur en cas d'erreur -->
         <CustomMessage v-if="errorMessage" :message="errorMessage" title="Erreur" type="error" />
         <!-- Affiche un message de bienvenue en cas de succès -->
@@ -18,7 +21,8 @@
         </div>
         <br />
         <!-- Bouton de connexion -->
-        <CustomButton label="Login" @click="handleLogin" type="primary" />
+        <CustomButton label="Login" @click="handleLogin" type="primary" size="large"/>
+      
       </div>
     </el-card>
   </div>
@@ -61,6 +65,9 @@
         );
       });
 
+      
+      const currentEnigme = ref(enigme.value);
+
       // Fonction de mise à jour du pseudo
       const updateUsername = (value: string) => {
         username.value = value;
@@ -82,6 +89,22 @@
         }
       };
 
+      // Fonction pour changer d'énigme
+      const changeEnigme = () => {
+        const max = enigmes.value.length;
+        const newEnigme =
+          enigmes.value.find((e) => e.id === Math.floor(Math.random() * max) + 1) ||
+          enigmes.value.find((e) => e.id === 1) ||
+          null;
+        // Mettre à jour l'énigme actuelle
+        currentEnigme.value = newEnigme;
+      };
+
+      const displayAnswer = () => {
+        if (currentEnigme.value)
+          password.value = currentEnigme.value?.reponse;
+      }
+
       // Retourne les variables et fonctions utilisées dans le template
       return {
         username,
@@ -90,7 +113,9 @@
         updateUsername,
         updatePassword,
         handleLogin,
-        enigme,
+        enigme: currentEnigme,
+        changeEnigme,
+        displayAnswer,
         goodMessage
       };
     },

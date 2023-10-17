@@ -20,6 +20,11 @@ export default createStore({
         question: "Je suis un endroit où vous vous reposez, prenez des douches, et où vous cuisinez. Où suis-je ?",
         reponse: "maison",
       },
+      {
+        id: 4,
+        question: "Quel être, pourvu d'une seule voix, a d'abord quatre jambes le matin, puis deux jambes à midi, et trois jambes le soir ?",
+        reponse: "homme",
+      },
     ],
   },
   getters: {

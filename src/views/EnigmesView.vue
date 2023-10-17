@@ -23,7 +23,7 @@
 
 <script lang="ts">
   import { defineComponent } from 'vue';
-  import store from '../store';
+  import { useStore } from 'vuex';
 
   // Interface définissant la structure d'une énigme
   export interface Enigme {
@@ -36,6 +36,7 @@
     computed: {
       // Récupère la liste des énigmes depuis le store
       enigmes(): Enigme[]  {
+        const store = useStore()
         return store.getters.getAllEnigmes;
       },
     },

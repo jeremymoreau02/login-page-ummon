@@ -30,7 +30,7 @@
   import InputField from './InputField.vue';
   import CustomButton from './CustomButton.vue';
   import EnigmeDetails from './EnigmeDetails.vue';
-  import { Enigme } from '../views/EnigmesView.vue';
+  import { Enigme } from '../types/Enigme';
   import { useStore } from 'vuex';
 
   export default defineComponent({

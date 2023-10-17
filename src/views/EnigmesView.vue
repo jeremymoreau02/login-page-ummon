@@ -24,13 +24,7 @@
 <script lang="ts">
   import { defineComponent } from 'vue';
   import { useStore } from 'vuex';
-
-  // Interface définissant la structure d'une énigme
-  export interface Enigme {
-    id: number;
-    question: string;
-    reponse: string;
-  }
+  import { Enigme } from '../types/Enigme';
 
   export default defineComponent({
     computed: {

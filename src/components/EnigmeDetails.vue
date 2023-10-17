@@ -16,7 +16,7 @@
 
 <script lang="ts">
   import { defineComponent, ref, computed, PropType } from 'vue';
-  import { Enigme } from '../views/EnigmesView.vue'; // Importe le modèle d'énigme
+  import { Enigme } from '../types/Enigme'; // Importe le modèle d'énigme
   
   export default defineComponent({
     props: {

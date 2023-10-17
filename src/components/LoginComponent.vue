@@ -8,6 +8,7 @@
         <CustomButton label="Autre énigme" @click="changeEnigme" type="warning" size="small"/>
         <CustomButton label="Afficher la réponse" @click="displayAnswer" type="danger" size="small"/>
         <br />
+        <br />
         <!-- Affiche un message d'erreur en cas d'erreur -->
         <CustomMessage v-if="errorMessage" :message="errorMessage" title="Erreur" type="error" />
         <!-- Affiche un message de bienvenue en cas de succès -->

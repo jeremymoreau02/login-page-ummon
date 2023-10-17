@@ -21,8 +21,9 @@
   export default defineComponent({
     props: {
       enigme: {
-        type: Object as () => Enigme | null, // Propriété enigme de type Enigme ou null
+        type: Object as () => Enigme | null,
         required: true, // Obligatoire
+        description: "Propriété enigme de type Enigme ou null"
       },
     }
   });

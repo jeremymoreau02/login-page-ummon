@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts">
-  import { defineComponent, ref, computed, PropType } from 'vue';
+  import { defineComponent } from 'vue';
   import { Enigme } from '../types/Enigme'; // Importe le modèle d'énigme
   
   export default defineComponent({

@@ -11,14 +11,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import Login from '../components/LoginComponent.vue';
+  import { defineComponent } from 'vue';
+  import Login from '../components/LoginComponent.vue';
 
-export default defineComponent({
-  components: {
-    Login,
-  },
-});
+  export default defineComponent({
+    components: {
+      Login,
+    },
+  });
 </script>
 
 <style scoped>

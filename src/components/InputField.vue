@@ -9,8 +9,14 @@
 
 <script lang="ts">
     import { defineComponent, ref, watch } from 'vue';
+    import { ElInput, ElCheckbox, ElFormItem } from 'element-plus';
 
     export default defineComponent({
+        components: {
+            ElInput,
+            ElCheckbox,
+            ElFormItem,
+        },
         props: {
             label: {
                 type: String,

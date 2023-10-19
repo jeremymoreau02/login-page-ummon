@@ -5,6 +5,11 @@
 npm install
 ```
 
+### Run tests and server
+```
+npm run dev
+```
+
 ### Compiles and hot-reloads for development
 ```
 npm run serve
@@ -18,6 +23,12 @@ npm run build
 ### Run your unit tests
 ```
 npm run test:unit
+```
+
+### Run your E2E tests
+```
+npx cypress run
+npx cypress open
 ```
 
 ### Lints and fixes files

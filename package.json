@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "dev": "concurrently \"npm run serve\" \"npm run test:unit\" \"npx cypress run\""
+    "dev": "start cmd /k npm run serve & start cmd /k npm run test:unit & start cmd /k npx cypress run"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.1.0",

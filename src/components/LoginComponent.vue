@@ -5,24 +5,24 @@
         <!-- Affiche les détails de l'énigme -->
         <EnigmeDetails :enigme="enigme" />
         <br />
-        <CustomButton label="Autre énigme" @click="changeEnigme" type="warning" size="small"/>
-        <CustomButton label="Afficher la réponse" @click="displayAnswer" type="danger" size="small"/>
+        <CustomButton data-cy="other-enigme-button" label="Autre énigme" @click="changeEnigme" type="warning" size="small"/>
+        <CustomButton data-cy="display-answer-button" label="Afficher la réponse" @click="displayAnswer" type="danger" size="small"/>
         <br />
         <br />
         <!-- Affiche un message d'erreur en cas d'erreur -->
-        <CustomMessage v-if="errorMessage" :message="errorMessage" title="Erreur" type="error" />
+        <CustomMessage data-cy="error-message" v-if="errorMessage" :message="errorMessage" title="Erreur" type="error" />
         <!-- Affiche un message de bienvenue en cas de succès -->
-        <CustomMessage v-if="goodMessage" :message="goodMessage" title="Bienvenue!" type="success" />
+        <CustomMessage data-cy="good-message" v-if="goodMessage" :message="goodMessage" title="Bienvenue!" type="success" />
         <br />
         <div class="input-fields">
           <!-- Champ de saisie du pseudo -->
-          <InputField type="text" label="Pseudo" :value="username" placeholder="Pseudo" @updateValue="updateUsername" />
+          <InputField data-cy="username-input" type="text" label="Pseudo" :value="username" placeholder="Pseudo" @updateValue="updateUsername" />
           <!-- Champ de saisie du mot de passe -->
-          <InputField type="password" label="Mot de passe" :value="password" placeholder="Mot de passe" @updateValue="updatePassword" />
+          <InputField data-cy="password-input" type="password" label="Mot de passe" :value="password" placeholder="Mot de passe" @updateValue="updatePassword" />
         </div>
         <br />
         <!-- Bouton de connexion -->
-        <CustomButton label="Login" @click="handleLogin" type="primary" size="large"/>
+        <CustomButton data-cy="login-button" label="Login" @click="handleLogin" type="primary" size="large"/>
       
       </div>
     </el-card>

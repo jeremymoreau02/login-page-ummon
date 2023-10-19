@@ -5,7 +5,7 @@
   <div class="login-view">
     <div class="login-container">
       <!-- Composant de connexion (Login) -->
-      <Login />
+      <Login data-cy="login-component" />
     </div>
   </div>
 </template>
